@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variáveis */
+:root {
+    --cor-fundo: #000;
+    --cor-texto: #FFF;
+    --cta: #14AE5C;
+    --cta-hover: #02542d;
+    --font-principal: 'Roboto', sans-serif;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--font-principal);
+}
+
+/* header */
+
+header {
+    background: var(--cor-fundo);
+    padding: 0;
+
+    .logo {
+        font-size: xx-large;
+        font-weight: bold;
+        margin-right: 32px;
+        flex: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 32px;
+    }
+}
+
+button {
+    background-color: var(--cta);
+    color: var(--cor-texto);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: var(--cta-hover);
+    }
+
+    &.white{
+        background-color: var(--cor-texto);
+        color: var(--cor-fundo);
+    }
+}
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-area {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.menu-area ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-area ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+
+.menu-area ul li a:hover {
+    color: var(--cta);
+}
+
+.menu-area .btn {
+    background: var(--cta);
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 32px;
+    font-size: 1em;
+    border: none;
+    transition: background 0.2s;
+}
+
+.menu-area .btn:hover {
+    background: var(--cta-hover);
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    height: 432px;
+    width: auto;
+    background-color: var(--cor-fundo);
+
+    &.hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../img/Imagem\ 1.png');
+        background-position: center;
+        background-size: cover;
+
+        .title-hero {
+            font-size: 68px;
+        }
+
+        .subtitle-hero{
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.descricao {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 2em 1em;
+    font-size: 10px;
+    margin-top: 1em;
+}
+.descricao p {
+    font-size: 2em;
+    margin-bottom: 0.7em;
+    font-weight: bold;
+}
+
+.descricao .icons {
+    display: block;
+    font-size: 1.5em;
+    margin: 0.5em 0 1em 0;
+    font-weight: normal;
+}
+
+.descricao p:last-child {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    font-size: 1.2em;
+    margin-top: 1em;
+    background: transparent;
+    color: #fff;
+    font-weight: normal;
+}
+button.white,
+button.white2 {
+    min-width: 180px;
+    padding: 10px 0;
+    font-size: 1em;
+    border-radius: 8px;
+    margin-right: 18px;
+    background-color: var(--cor-texto);
+    color: #000;
+    border: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button.white:last-child,
+button.white2:last-child {
+    margin-right: 0;
+}
+.media {
+    margin: 2em 0;
+}
+.icons {
+    font-size: 1.2em;
+}
+.drone-media {
+    text-align: center;
+    margin: 2em 0;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 432px;
+}
+
+.drone-media video {
+    width: 100%;
+    max-width: 900px; 
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px; /* Espaço entre os blocos */
+    background: #1E1D1D;
+    width: 100%;
+    padding: 40px 32px; /* Espaço interno nas bordas */
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    box-sizing: border-box;
+}
+            
+.caracteristicas div {
+    background: #222;
+    color: #fff;
+    padding: 2em 1.5em;
+    border: 1px solid #333;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    font-size: 1.2em;
+}
+.caracteristicas h3 {
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.caracteristicas p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.testemunho {
+    background: url('../img/Imagem\ 3.jpg') center center/cover no-repeat; 
+    padding: 48px 0;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.testemunho::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+.testemunho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 2;
+}
+.depoimento {
+    flex: 2;
+    color: #fff;
+    text-align: left;
+    padding-right: 32px;
+}
+.depoimento h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+.depoimento .frase {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.depoimento .autor {
+    font-size: 1em;
+    color: #bdbdbd;
+}
+.foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    background: #222;
+}
+.avaliacao {
+    flex: 2;
+    color: #fff;
+    text-align: left;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.avaliacao .estrelas {
+    font-size: 2em;
+    color: #FFD700;
+    margin-bottom: 0.2em;
+}
+.avaliacao h3 {
+    font-size: 1.7em;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+
+.avaliacao p {
+    font-size: 1.1em;
+    margin: 0;
+}
+.contato-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    background: #000;
+    border-radius: 12px;
+    padding: 32px 32px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    gap: 40px;
+}
+.contato {
+    color: #fff;
+    flex: 1 1 0;
+    max-width: 420px;
+    min-width: 320px;
+    text-align: left;
+    background: transparent;
+    padding: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contato h3 {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+.contato h6 {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.contato p {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.formulario-inscricao {
+    background: #000;
+    padding: 16px 16px 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 320px;
+    max-width: 340px;
+    flex: 1 1 340px;
+    align-items: stretch;
+    margin-left: 0;
+}
+.formulario-inscricao label {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+.formulario-inscricao input {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.formulario-inscricao button {
+    background: #14AE5C;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s;
+}
+
+.formulario-inscricao button:hover {
+    background: #02542d;
+}
+footer {
+    background: #111;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .menu-area {
+        display: none;
+    }
+    section,
+    .drone-media {
+        height: auto;
+        padding: 2em 1em;
+        flex-direction: column;
+    }
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 20px;
+        padding: 24px 8px;
+    }
+
+    .caracteristicas div {
+        min-height: 80px;
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    .testemunho-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 100vw;
+        padding: 0 8px;
+    }
+
+    .depoimento,
+    .avaliacao {
+        text-align: center;
+        padding: 0;
+    }
+
+    .foto img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contato-area {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px 8px;
+        max-width: 98vw;
+        gap: 24px;
+    }
+
+    .contato {
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 16px;
+        align-items: flex-start;
+    }
+
+    .formulario-inscricao {
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        padding: 16px 8px 12px 8px;
+    }
+
+    button.white,
+    button.white2 {
+        min-width: 140px;
+        font-size: 0.95em;
+        margin-right: 12px;
+        margin-bottom: 8px;
+        padding: 8px 0;
+    }
+
+    .menu-area ul {
+        gap: 1em;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    section,
+    .drone-media {
+        padding: 0.5em 1vw;
+    }
+
+    .caracteristicas {
+        padding: 8px 1vw;
+        gap: 8px;
+    }
+    .caracteristicas div {
+        font-size: 0.95em;
+        padding: 0.7em;
+        min-height: 60px;
+    }
+
+    .testemunho {
+        padding: 12px 0;
+        min-height: 120px;
+    }
+    .testemunho-conteudo {
+        gap: 12px;
+        padding: 0 4px;
+    }
+
+    .foto img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contato-area {
+        padding: 8px 2vw;
+        gap: 8px;
+    }
+
+    .contato h3 {
+        font-size: 1.3em;
+    }
+
+    .contato h6 {
+        font-size: 1em;
+    }
+
+    .contato p {
+        font-size: 1em;
+    }
+
+    .formulario-inscricao {
+        padding: 6px 2vw 6px 2vw;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .formulario-inscricao label {
+        font-size: 0.95em;
+    }
+
+    .formulario-inscricao input {
+        padding: 6px;
+        font-size: 0.95em;
+    }
+
+    .formulario-inscricao button {
+        padding: 7px 0;
+        font-size: 0.95em;
+    }
+
+    button.white,
+    button.white2 {
+        min-width: 90px;
+        font-size: 0.9em;
+        margin-right: 6px;
+        padding: 6px 0;
+    }
+}
