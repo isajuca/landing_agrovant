@@ -430,7 +430,7 @@ footer {
 
 /* Responsividade para telas menores */
 @media (max-width: 900px) {
-    .menu-area {
+    .menu-area ul{
         display: none;
     }
     section,
